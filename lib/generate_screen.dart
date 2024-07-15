@@ -6,7 +6,7 @@ class GenerateScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Generate QR Code'),
+        title: Text('Generation de QR Code'),
       ),
       body: Center(
         child: Column(
@@ -19,7 +19,7 @@ class GenerateScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => GenerateFromTextScreen()),
                 );
               },
-              child: Text('Generate from Text'),
+              child: Text('Generer par Text'),
             ),
             ElevatedButton(
               onPressed: () {
@@ -28,7 +28,7 @@ class GenerateScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => GenerateFromFieldsScreen()),
                 );
               },
-              child: Text('Generate from Fields'),
+              child: Text('Generer par info'),
             ),
           ],
         ),
@@ -49,7 +49,7 @@ class _GenerateFromTextScreenState extends State<GenerateFromTextScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Generate QR Code from Text'),
+        title: Text('Generer un Qr Code avec Text'),
       ),
       body: Center(
         child: Column(
@@ -61,7 +61,7 @@ class _GenerateFromTextScreenState extends State<GenerateFromTextScreen> {
                 controller: textController,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Enter text',
+                  labelText: 'Entrer le text',
                 ),
               ),
             ),
@@ -69,7 +69,7 @@ class _GenerateFromTextScreenState extends State<GenerateFromTextScreen> {
               onPressed: () {
                 setState(() {});
               },
-              child: Text('Generate QR Code'),
+              child: Text('Generer QR Code'),
             ),
             if (textController.text.isNotEmpty)
               QrImageView(
@@ -99,7 +99,7 @@ class _GenerateFromFieldsScreenState extends State<GenerateFromFieldsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Generate QR Code from Fields'),
+        title: Text('Genenrer QR Code personnel'),
       ),
       body: Center(
         child: Column(
@@ -111,7 +111,7 @@ class _GenerateFromFieldsScreenState extends State<GenerateFromFieldsScreen> {
                 controller: nameController,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Name',
+                  labelText: 'Nom',
                 ),
               ),
             ),
@@ -121,7 +121,7 @@ class _GenerateFromFieldsScreenState extends State<GenerateFromFieldsScreen> {
                 controller: surnameController,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Surname',
+                  labelText: 'Prenom',
                 ),
               ),
             ),
@@ -131,7 +131,7 @@ class _GenerateFromFieldsScreenState extends State<GenerateFromFieldsScreen> {
                 controller: numberController,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Number',
+                  labelText: 'Numero',
                 ),
               ),
             ),
@@ -151,7 +151,7 @@ class _GenerateFromFieldsScreenState extends State<GenerateFromFieldsScreen> {
                 controller: otherController,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Other',
+                  labelText: 'Rermarque',
                 ),
               ),
             ),
@@ -159,7 +159,7 @@ class _GenerateFromFieldsScreenState extends State<GenerateFromFieldsScreen> {
               onPressed: () {
                 setState(() {});
               },
-              child: Text('Generate QR Code'),
+              child: Text('Generer QR Code'),
             ),
             if (nameController.text.isNotEmpty ||
                 surnameController.text.isNotEmpty ||
@@ -168,7 +168,7 @@ class _GenerateFromFieldsScreenState extends State<GenerateFromFieldsScreen> {
                 otherController.text.isNotEmpty)
               QrImageView(
                 data:
-                    'Name: ${nameController.text}\nSurname: ${surnameController.text}\nNumber: ${numberController.text}\nAddress: ${addressController.text}\nOther: ${otherController.text}',
+                    'Nom: ${nameController.text}\n Prenom: ${surnameController.text}\n Numero: ${numberController.text}\n Addresse: ${addressController.text}\n Remarque: ${otherController.text}',
                 size: 200.0,
               ),
           ],

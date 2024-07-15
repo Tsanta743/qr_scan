@@ -40,7 +40,7 @@ class _ScanScreenState extends State<ScanScreen> {
                     MaterialPageRoute(builder: (context) => HistoryScreen(history: history)),
                   );
                 },
-                child: Text('View History'),
+                child: Text('Voir les Historiques'),
               ),
             ),
           )

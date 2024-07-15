@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'scan_screen.dart';
 import 'generate_screen.dart';
-import 'history_screen.dart';
 import 'db_helper.dart';
 
 void main() async {
@@ -24,7 +23,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('QR Scanner & Generator'),
+        title: Text('QR Scanneur & Generateur'),
       ),
       body: Center(
         child: Column(
@@ -46,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => GenerateScreen()),
                 );
               },
-              child: Text('Generate QR Code'),
+              child: Text('Generer QR Code'),
             ),
           ],
         ),
